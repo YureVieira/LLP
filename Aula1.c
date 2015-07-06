@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <math.h>
+#include <conio.h>	//getch()
 
 
 //prototipos
@@ -18,9 +19,25 @@ void fn3();
 //Função principal
 void main()
 {
-	//fn1();
-	//Trapezio_area();
-	fn3();
+	char key;
+	do
+	{
+		//Limpa tela
+		system("cls");	
+		
+		/*funções*/
+		/*******************/
+		//fn1();
+		//Trapezio_area();
+		fn3();
+		/*******************/
+		
+		//Pergunta se quer sair
+		printf("\nPressione 'q' para sair\n");
+		key = getch();
+		
+	}while(key!='q');
+	
 }
 
 /******************************************************
@@ -95,5 +112,4 @@ void fn3()
 		printf("\nX = %0.0f",x);	//Exibe resposta
 	}	
 }
-
 
